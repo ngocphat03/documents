@@ -1,0 +1,247 @@
+GHI CHÚ
+	- Để dấu chấm phẩy hay k thì vẫn chạy đc nhưng nếu k để dấu chấm phẩy thì k để các câu lệnh trên cùng một dòng dc
+	- Cách comments trong JS (tương tự C++)
+		+ Comments 1 dòng: //
+		+ Comments nhiều dòng: /*	*/
+<==========>
+CÁC CÂU LỆNH
+var fullName = 'Ngon Ngoc Phat';	[Đặt biến]
+
+alert(fullName);	[Hàm đặt thông báo] *nếu 2 hàm alert đặt cạnh nhau thì sẽ chạy từng cái một
+
+<==========>
+
+Một số hàm Built-in:
+	1. Alert
+		alert(fullName);	[Hàm đặt thông báo] *nếu 2 hàm alert đặt cạnh nhau thì sẽ chạy từng cái một
+	2. Console
+		console.log(giaTri)		[tương tự cout trong C++]
+	3. Confirm
+		confirm('Xác nhận gì đó')		[tạo ra hộp thoại xác minh/ xác nhận điều gì đó]
+	4. Prompt
+		prompt('xác nhận gì đó') 	[tạo ra hộp thoại input]
+	5. Set timeout
+		setTimeout(function () {
+
+		}, )
+		[Thực thi câu lệnh sau một khoảng thời gian]
+	6. Set interval
+		setInterval(function () {
+
+		}, )
+		[Thực thi câu lệnh liên tục sau một khoảng thời gian]
+
+<==========>
+
+Các loại toán tử:		[Y chang C++]
+	1. Toán tử số học - Arithmetic
+		var a = 1 + 2;
+	2. Toán tử gán - Asignment
+		var fullName = 'Ngon Ngoc Phat';
+	3. Toán tử so sánh - Comparison
+		var a = 1;
+		var b = 3;
+		if( a>=b){
+			console.log('Đúng')
+		}
+	4. Toán tử logic - Logical
+		var a = 1;
+		var b = 2;
+		if(a >= 0 && b > 0) {
+			console.log('a & b lớn hơn 0');
+		}
+
+<==========>
+
+Toán tử số học:		[Y chang C++]
+	+	Cộng
+	-	Trừ
+	*	Nhân
+	**	Lũy thừa
+	/	Chia
+	%	Chia lấy dư
+	++	Tăng lên 1 đơn vị
+	--	Giảm đi một đơn vị
+
+<==========>
+
+Toán tử gán
+	Toán tử		Ví dụ		Tương đương
+	=			x = y 		x = y
+	+=			x += y 		x = x + y
+	-=			x -= y 		x = x - y
+	*= 			x *= y 		x = x * y
+	/=			x /= y 		x = x / y
+	**=			x **= y 	x = x ** y
+
+<==========>
+
+Nguyên lý hoạt động của ++ / -- TƯƠNG TỰ C++
+
+<==========>
+
+Toán tử nối chuỗi 	TƯƠNG TỰ C++
+
+<==========>
+
+Toán tử so sánh 	TƯƠNG TỰ C++
+
+<==========>
+
+Kiểu dữ liệu Boolean
+
+<==========>
+
+Toán tử logical		TƯƠNG TỰ C++
+
+	1. && 	= AND
+	2. ||	= OR
+	3. !	= NOT
+
+<==========>
+
+Kiểu dữ liệu:
+1. Dữ liệu nguyên thủy
+	- Number
+	- String
+	- Boolean
+	- Undefined
+	- Null
+	- Symbol
+2. Dữ liệu phức tạp
+	- Function
+	- Object
+
+<==========>
+
+Toán tử logical và câu lệnh điều kiện If	SAME SAME C++
+
+<==========>
+
+Chuỗi		SAME SAME C++
+	1. length	[Độ dài chuỗi]
+		console.log(myString.length);
+
+	2. find index	
+		console.log(myString.indexOf('ABC'))	[Tìm ký tự trong chuỗi]	
+		console.log(myString.search('ABC'))	[Tìm ký tự theo biểu thức chính quy]	
+
+	3. Cut string
+		console.log(myString.slice(3))		[Cắt chuỗi từ 3]
+	
+	4. Replace
+		console.log(myString.replace('JS', 'Javascript')
+		
+	5. Convert to upper case 	[Viết hoa tất cả các chữ ]
+		console.log(myString.toUpperCase())
+	
+	6. Convert to lower case 	[Viết thường tất cả các chữ ]
+		console.log(myString.toLowerCase())
+
+	7. Trim 	[Xóa khoảng trắng trước chuỗi]
+		console.log(myString.trim())
+	
+	8. Split	[Dùng điểm chung để tách chuỗi thành array]
+		console.log(myString.split(''))
+		 	
+	9. Get a character by index	[Lấy ký tự trong chuỗi]
+		console.log(myString.charAt())
+<==========>
+
+Số và làm việc với số 	(JS number methods)
+	1.To string	[Chuyển đổi kiểu number thành string]
+		console.log(age.toString())
+
+	2. To Fixed	[Làm tròn số]
+		console.log(PI.toFixed())
+
+<==========>
+
+Mảng	(JS array methods)
+	1.Cách tạo mảng
+	var languages = [
+		'PHP',
+		'JS',
+		'Python',
+	];
+
+	2. Kiểm tra array
+	console.log(Array.isArray())
+
+	3. Truy xuất mảng
+	console.log(language[2])
+
+<==========>
+
+Làm việc với mảng:
+	1. To String	[Chuyển dữ liệu sang chuỗi]
+	console.log(language.toString())
+
+	2. Join		[Chuyển dữ liệu sang array]
+	console.log(language.join())
+
+	3. Pop		[Xóa phần tử cuối mảng và trả lại phần tử đã xóa]
+	console.log(language.pop())
+
+	4. Push		[Thêm một hoặc nhiều phần tử cuối mảng và trả về độ dài mới]
+	console.log(language.push())
+
+	5. Shift	[Xóa phần tử đầu mảng và trả lại phần tử đã xóa]
+	console.log(language.shift())
+
+	6. Unshift 	[Thêm một hoặc nhiều phần tử đầu mảng và trả về độ dài mới]
+	console.log(language.unshift())
+
+	7. Splicing 	[Xóa, cắt, chèn phần tử vào mảng]
+	language.splice("vị trí đặt trỏ", "số lượng phần tử muốn xóa", "phần tử muốn chèn vào (đặt trong dấu '') ")
+
+	8. Concat 	[Nối mảng]
+	console.log(language.concat())
+
+	9. Slicing	[Cắt 1 hoặc toàn bộ element]
+	console.log(language.slice())
+
+<==========>
+
+Hàm	
+	Tạo hàm
+	function showDialog() {
+		alent('Hiiiii');
+	}
+
+	Cách gọi hàm:
+	showDialog();
+
+Tham số trong hàm
+	function writeLog(message) {
+		console.log(message)
+	}
+	*message là tham số
+
+Return		[Trả về giá trị]
+	
+	
+
+<==========>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
