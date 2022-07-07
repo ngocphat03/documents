@@ -119,6 +119,10 @@ Toán tử logical và câu lệnh điều kiện If	SAME SAME C++
 <==========>
 
 Chuỗi		SAME SAME C++
+ Khai báo chuỗi:
+  var a = 'Hoc thi ngu, choi thi nhieu';
+
+ Các thuộc tính và phương thức của chuỗi
 	1. length	[Độ dài chuỗi]
 		console.log(myString.length);
 
@@ -129,8 +133,8 @@ Chuỗi		SAME SAME C++
 	3. Cut string
 		console.log(myString.slice(3))		[Cắt chuỗi từ 3]
 	
-	4. Replace
-		console.log(myString.replace('JS', 'Javascript')
+	4. Replace		[Tìm kiếm và thay thế chuỗi]
+		console.log(myString.replace('Từ cần tìm', 'Từ cần thay thế')
 		
 	5. Convert to upper case 	[Viết hoa tất cả các chữ ]
 		console.log(myString.toUpperCase())
@@ -219,7 +223,13 @@ Tham số trong hàm
 	*message là tham số
 
 Return		[Trả về giá trị]
-	
+	function cong(a, b) {
+		return a + b;
+	}
+
+	var result = cong(2, 8);
+
+	console.log(result)
 	
 
 <==========>
@@ -269,6 +279,7 @@ Một số cách khai báo:
     var a = Math.min(0, 16, -3, 5.25, 100, -1); 
 	//Trả về -3
 
+<==========>
 
 
 
