@@ -223,9 +223,51 @@ Return		[Trả về giá trị]
 	
 
 <==========>
+Variable (biến) là nơi bạn có thể lưu trữ thông tin.
+Một số cách khai báo:
+	- let: cách khai báo thông dụng cho JS hiện tại
+	VD:
+		let thong_Bao;
+		thong_Bao = 'Xin Chào';
+		console.log(thong_Bao);
 
+	- var: Một kiểu khai báo cũ
+	VD:
+		var a = 1 + 2;
 
+	- const: giống như cách khai báo let nhưng giá trị không thay đổi được
+	VD:
+		const pi = 3.14159265359;
+		pi = 4;
+ 		console.log(pi);
+<==========>
 
+Đối tượng toán học trong JS
+
+1.abs()		(Trả về giá trị tuyệt đối của một số)
+	var b = Math.abs(-8.75); //Trả về 8.75
+2. random()		Trả về một số ngẫu nhiên trong khoảng từ 0 đến 1
+    var a = Math.random();
+    document.write(a + "<br>");
+3. sqrt() 		Trả về căn bậc hai của một số
+	var b = Math.sqrt(1);
+4. pow() 		Trả về lũy thừa của hai số xác định
+	var a = Math.pow(5,2);
+5. ceil()		Làm tròn lên một số nguyên gần nó nhất
+	var a = Math.floor(3.60);
+	// 3.6 => 4 || 3.4 => 4 || -3.6 => -3 || -3.4 => -3 ||
+6. floor()		Làm tròn một số xuống số nguyên gần nó nhất
+	var a = Math.floor(3.60);
+	// 3.6 => 3 || 3.4 => 3 || -3.6 => -4 || -3.4 => -4 ||
+7. round()		Làm tròn một số đến số nguyên gần nó nhất
+    var a = Math.round(3.60);
+	//  3.6 => 4 || 3.4 => 3 || -3.6 => -4 || -3.4 => -3 ||
+8. max() 		Trả về số lớn nhất trong danh sách
+    var a = Math.max(0, 16, -3, 5.25, 100, -1); 
+	//Trả về 100
+9. min()		Trả về số nhỏ nhất trong danh sách
+    var a = Math.min(0, 16, -3, 5.25, 100, -1); 
+	//Trả về -3
 
 
 
