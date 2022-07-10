@@ -281,9 +281,36 @@ Một số cách khai báo:
 
 <==========>
 
+DOM
 
+1. getElementById: Gán/gọi ID từ file HTML qua biến JS
+	document.getElementById(elementID)
+	VD:
+		var change = document.getElementById('change');
 
+2. getElementByClassName: Gán/gọi CLASS từ file HTML qua bên JS
+	document.getElementByClassName(elementCLASS)
+	VD:
+		const contener2 = document.getElementsByClassName('contener2');
 
+3. getElementByTagName: Gán/gọi các thẻ (<p></p>; <div></div>;...) từ file HTML qua JS
+	document.getElementByClassName(element)
+	VD:
+		const p = document.getElementsByTagName('p');
+
+4. Thay đổi các thuộc tính CSS bằng JavaScript
+	Khai báo:
+		(tên biến/hàm).style.(thuộc tính cần thay đổi) ;
+	
+	Một số thuộc tính cơ bản:
+		style.color = "(color)";	
+		style.backgroundColor = "(color)";
+		style.height = "200px";
+		style.width = "200px";
+		style.border = "2px solid black";
+		style.fontSize = "10px";
+		style.textAlign = "center";
+		
 
 
 
