@@ -311,17 +311,75 @@ DOM
 		style.fontSize = "10px";
 		style.textAlign = "center";
 		
+<==========>
+
+IIFE
+
+1. IIFE là gì?
+	Là một biểu thức tạo ra một hàm mà hàm đó sẽ được gọi ngay lập tức
+	Không có tính sử dụng lại 
+2. VD IIFE:
+(function() {
+	console.log('Qua dinh')
+})()
+
+3. Một số lưu ý 
+***Nên để dấu ";" trước IIFE
+
+IIFE là hàm "private" (Không thể truy cập) nên được sử dụng khi muốn không cho người khác biết code của mình; nó sẽ không ảnh hưởng đến biến toàn cục (các thư viện thường dùng IIFE để tránh ảnh hưởng đến các biến của người dùng)
+
+<==========>
+
+SCOPE - Phạm vi
+
+1. Các loại scope:
+	- Global [Toàn cầu]
+	- Code Block [Khối mã: let, const]
+	- Local scope [Hàm: var function]
+
+Lưu ý:
+	- Mỗi lần gọi HÀM sẽ có 1 phạm vi mới được tạo ra
+	- Các hàm có thể truy cập được các biến đã khai báo trong nó và ngoài phạm vi của nó
+
+2. Khi nào một biến bị xóa
+	- Biến toàn cầu: Khi tải lại trang web
+	- Code block: Khi hàm hoặc biến được thực thi xong
+	- Biến trong hàm được tham chiếu bởi một hàm khác (function in function): Không được xóa khỏi bộ nhớ
 
 
+<==========>
+
+Closure
+
+1. Closure là gì?
+	- Là một hàm có thể ghi nhớ nơi nó được tạo và truy cập được biến ở bên ngoài phạm vi của nó
+   
+2. Ứng dụng
+	- Viết code ngắn gọn hơn
+	- Biểu diễn, ứng dụng tính Private trong OOP
+
+3. Lưu ý
+	- Biến được tham chiếu (refer) trong closure sẽ không được xóa khỏi bộ nhớ khi hàm cha thực thi xong
+	- Các khái niệm JS nâng cao rẩt dễ gây nhầm lẫn
 
 
+<==========>
+
+Hoisting
+
+1. Khái niệm:
+	- Nó sẽ đẩy phần khai báo lên phía trên, một biến có thể khai báo sau khi sử dụng
+
+2. Lưu ý:
+	- Chỉ có phần khai báo được đưa lên top, không phải phần giá trị
+	- Phần khai báo hàm được đưa lên trước phần khai báo của biến
 
 
+<==========>
 
+Use strict AND strict mode
 
-
-
-
-
-
+2. Cách sử dụng (chế độ nghiêm ngặt)
+	Viết '"use strict";' trên đầu file JS
+	
 
