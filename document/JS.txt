@@ -383,3 +383,68 @@ Use strict AND strict mode
 	Viết '"use strict";' trên đầu file JS
 	
 
+<==========>
+
+Đồng bộ và không đồng bộ:
+	- Khi hai hay nhiều việc được gọi là đồng bộ khi chúng xảy ra trong cùng một lần, ngược lại không đồng bộ.
+	- Code đồng bộ là code được chạy từ trên xuống dưới, code bên dưới chỉ chạy khi code ở bên trên đã chạy xong và trả về kết quả. Code không đồng bộ là các đoạn code ở phía dưới có thể chạy dù code bên trên chưa được thực thi và trả kết quả về.
+
+JS là ngôn ngữ không đồng bộ
+	- Các hàm trong JS không được gọi trực tiếp mà thông qua các thông điệp. JS sử dụng một hàng đợi các thông điệp. Một vòng lặp sự kiện để tuần tự gửi các message đến một lời gọi stack. Stack đó là nơi sẽ lưu trữ các chức năng tương tự với các thông điệp vầ được xếp chồng lên nhau để thực hiện
+	Stack lưu frame của chức năng ban đầu được gọi đến, sau đó bất kỳ frame cho các chức năng khác đượcgoij qua các cuộc gọi lồng nhau sẽ được đẩy lên lưu bên trên nó.
+
+<==========>
+
+Promise 
+	Promise là cách xử lý bất đồng bộ, thay vì gộp tất cả các function phụ thuộc vào một đoạn code, dễ gây rối rắm, promise nó sẽ tách nó ra.
+
+	Promise sẽ giúp viết mã modul dễ đọc, quản lý hơn
+
+<==========>
+
+Callback function
+	Callback function là hàm được truyền vào một hàm cha khác như một tham số đầu vào, sau đó sẽ được gọi kích hoạt bên trong hàm cha này.
+
+	Tại sao cần dùng callback function?
+	Tránh việc chờ dữ liệu xuất hiện hoặc hàm được thực hiện quá lâu làm cho chương trình phải dừng lại.
+
+<==========>
+
+Async await
+	- Async sẽ thông báo rằng function sẽ xử lý bất đồng bộ
+	- Await sẽ được dùng để báo chúng ta muốn đợi kết quả của thao tác bất đồng bộ trong một function có đánh dấu async
+
+	CÁCH DÙNG:
+		- Async:
+		Từ kháo async được đặt trước 1 hàm làm cho hàm trả về promise
+		VD:
+		async function myFunction() {
+			return "Hmm";
+		}
+		- Await:
+		Từ khóa await được đặt trước 1 hàm làm cho hàm chờ một promise. Từ khoá await chỉ có thể được sử dụng bên trong một hàm không đồng bộ
+		VD:
+		let value = await promise;
+
+<==========>
+
+Arrow function
+	Arrow function là một cách viết function khác 
+
+	CÁCH SỬ DỤNG
+	Cú pháp với nhiều tham số:
+
+<==========>
+
+Let, var, const:
+1.Phạm vi 
+	Let: là block scope
+	Var: là function scope, global scope
+	Const: là block scope
+2. Cập nhật:
+	let, var 100%
+	const 0%
+3. Khai báo lại
+	var 100%
+	let, const 0%
+	
