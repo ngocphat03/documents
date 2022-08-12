@@ -288,13 +288,13 @@ DOM
 	VD:
 		var change = document.getElementById('change');
 
-2. getElementByClassName: Gán/gọi CLASS từ file HTML qua bên JS
-	document.getElementByClassName(elementCLASS)
+2. getElementsByClassName: Gán/gọi CLASS từ file HTML qua bên JS
+	document.getElementsByClassName(elementCLASS)
 	VD:
 		const contener2 = document.getElementsByClassName('contener2');
 
 3. getElementByTagName: Gán/gọi các thẻ (<p></p>; <div></div>;...) từ file HTML qua JS
-	document.getElementByClassName(element)
+	document.getElementsByClassName(element)
 	VD:
 		const p = document.getElementsByTagName('p');
 
@@ -333,7 +333,7 @@ IIFE là hàm "private" (Không thể truy cập) nên được sử dụng khi 
 SCOPE - Phạm vi
 
 1. Các loại scope:
-	- Global [Toàn cầu]
+	- Global [Toàn cục]
 	- Code Block [Khối mã: let, const]
 	- Local scope [Hàm: var function]
 
@@ -342,7 +342,7 @@ Lưu ý:
 	- Các hàm có thể truy cập được các biến đã khai báo trong nó và ngoài phạm vi của nó
 
 2. Khi nào một biến bị xóa
-	- Biến toàn cầu: Khi tải lại trang web
+	- Biến toàn cục: Khi tải lại trang web
 	- Code block: Khi hàm hoặc biến được thực thi xong
 	- Biến trong hàm được tham chiếu bởi một hàm khác (function in function): Không được xóa khỏi bộ nhớ
 
@@ -356,11 +356,19 @@ Closure
    
 2. Ứng dụng
 	- Viết code ngắn gọn hơn
-	- Biểu diễn, ứng dụng tính Private trong OOP
+	- Biểu diễn, ứng dụng tính Private trong OOP (lập trình hướng đối tượng)
 
 3. Lưu ý
 	- Biến được tham chiếu (refer) trong closure sẽ không được xóa khỏi bộ nhớ khi hàm cha thực thi xong
 	- Các khái niệm JS nâng cao rẩt dễ gây nhầm lẫn
+4. VD Closure
+
+function a() {
+    var name = "I'm a Copy";
+    function b() { // Closure
+        console.log(name);
+    }
+}
 
 
 <==========>
@@ -386,12 +394,16 @@ Use strict AND strict mode
 <==========>
 
 Đồng bộ và không đồng bộ:
-	- Khi hai hay nhiều việc được gọi là đồng bộ khi chúng xảy ra trong cùng một lần, ngược lại không đồng bộ.
-	- Code đồng bộ là code được chạy từ trên xuống dưới, code bên dưới chỉ chạy khi code ở bên trên đã chạy xong và trả về kết quả. Code không đồng bộ là các đoạn code ở phía dưới có thể chạy dù code bên trên chưa được thực thi và trả kết quả về.
+	- Code đồng bộ là code được chạy từ trên xuống dưới, code bên dưới chỉ chạy khi code ở bên trên đã 
+	chạy xong và trả về kết quả. Code không đồng bộ là các đoạn code ở phía dưới có thể chạy dù code bên 
+	trên chưa được thực thi và trả kết quả về.
 
 JS là ngôn ngữ không đồng bộ
-	- Các hàm trong JS không được gọi trực tiếp mà thông qua các thông điệp. JS sử dụng một hàng đợi các thông điệp. Một vòng lặp sự kiện để tuần tự gửi các message đến một lời gọi stack. Stack đó là nơi sẽ lưu trữ các chức năng tương tự với các thông điệp vầ được xếp chồng lên nhau để thực hiện
-	Stack lưu frame của chức năng ban đầu được gọi đến, sau đó bất kỳ frame cho các chức năng khác đượcgoij qua các cuộc gọi lồng nhau sẽ được đẩy lên lưu bên trên nó.
+	- Các hàm trong JS không được gọi trực tiếp mà thông qua các thông điệp. JS sử dụng một hàng đợi các 
+	thông điệp. Một vòng lặp sự kiện để tuần tự gửi các message đến một lời gọi stack. Stack đó là nơi sẽ 
+	lưu trữ các chức năng tương tự với các thông điệp vầ được xếp chồng lên nhau để thực hiện
+	Stack lưu frame của chức năng ban đầu được gọi đến, sau đó bất kỳ frame cho các chức năng khác đượcgoij 
+	qua các cuộc gọi lồng nhau sẽ được đẩy lên lưu bên trên nó.
 
 <==========>
 
@@ -433,7 +445,19 @@ Arrow function
 
 	CÁCH SỬ DỤNG
 	Cú pháp với nhiều tham số:
-
+		const multiTestEs6 = (a, b) => { return a * b };
+	Cú pháp với một tham số
+		const phraseSplitterEs6 = phrase => phrase.split(" ");
+		console.log(phraseSplitterEs6("Coding Bootcamp")); 
+	Không có tham số
+		var docLogEs6 = () => { console.log(document); };
+		docLogEs6();
+	Cú pháp Object literals
+		var setNameIdsEs6 = (id, name) => ({ id: id, name: name });
+		console.log(setNameIdsEs6 (4, "Van Quy")); 
+	Promise và Callback
+		aAsync().then(() => bAsync()).then(() => cAsync()).done(() => finish);
+		
 <==========>
 
 Let, var, const:
