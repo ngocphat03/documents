@@ -408,17 +408,31 @@ JS là ngôn ngữ không đồng bộ
 <==========>
 
 Promise 
-	Promise là cách xử lý bất đồng bộ, thay vì gộp tất cả các function phụ thuộc vào một đoạn code, dễ gây rối rắm, promise nó sẽ tách nó ra.
+	Promise là cách xử lý bất đồng bộ, thay vì gộp tất cả các function phụ thuộc vào một đoạn code, dễ gây rối rắm, 
+	promise nó sẽ tách nó ra.
 
 	Promise sẽ giúp viết mã modul dễ đọc, quản lý hơn
+	
+	Cú pháp:
+	let promise = new Promise(function(resolve, reject))
 
 <==========>
 
 Callback function
-	Callback function là hàm được truyền vào một hàm cha khác như một tham số đầu vào, sau đó sẽ được gọi kích hoạt bên trong hàm cha này.
+	Callback function là hàm được truyền vào một hàm cha khác như một tham số đầu vào, sau đó sẽ được gọi kích hoạt 
+	bên trong hàm cha này.
 
 	Tại sao cần dùng callback function?
 	Tránh việc chờ dữ liệu xuất hiện hoặc hàm được thực hiện quá lâu làm cho chương trình phải dừng lại.
+	VD:
+	function doHomework(subject, callback) {
+		alert(`Starting my ${subject} homework.`);
+		callback();
+	}
+	doHomework('math', function() {
+		alert('Finished my homework');
+	});
+
 
 <==========>
 
@@ -434,7 +448,8 @@ Async await
 			return "Hmm";
 		}
 		- Await:
-		Từ khóa await được đặt trước 1 hàm làm cho hàm chờ một promise. Từ khoá await chỉ có thể được sử dụng bên trong một hàm không đồng bộ
+		Từ khóa await được đặt trước 1 hàm làm cho hàm chờ một promise. Từ khoá await chỉ có thể được sử dụng bên trong 
+		một hàm không đồng bộ
 		VD:
 		let value = await promise;
 
