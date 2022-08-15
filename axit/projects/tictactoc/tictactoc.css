@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    font-family: 'Lato', sans-serif;
+}
+p{
+    font-size: 150px;
+    text-align: center;
+    line-height: 100%;
+    /* text-shadow: 0 0 0.2em; */
+}
+.contaner{
+    width: 1020px;
+    height: 606px;
+    margin: 20px auto auto auto;
+    border-style: 5px solid;
+    color: white;
+}
+.contaner__main{
+    width: 600px;
+    height: 600px;
+    float: left;
+    border: 3px solid white;
+}
+.contaner__point{
+    width: 400px;
+    height: 594px;
+    display: inline-block;
+    float: left;
+    border: 6px solid white;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    float: left;
+    border: 3px solid white;
+}
+.x{
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+#reset{
+    width: 100px;
+    height: 100px;
+}
+/* .box1X, #box1O, .box2X, .box2O, .box3X, .box3O, .box4X, .box4O, .box5X, .box5O, .box6X, .box6O, .box7X, .box7O, .box8X, .box8O, .box9X, .box9O {
+    display: none;
+} */
+/* #box1X{
+    display: none;
+} */
+.title{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin: 25px 0px;
+}
+.score{
+    width: 100%;
+    height: 300px;
+    margin: 25px 0px;
+    text-align: center;
+}
+.score__xo{
+    width: 100%;
+    height: 250px;
+    display: inline-flex;
+    font-size: 100px;
+    color: white;
+}
+.score__xo--x{
+    width: 50%;
+    height: 250px;
+}
+.score__xo--o{
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.box-x{
+   width: 100%; 
+   height: 120px;
+   display: block;
+}
+.box-o{
+   width: 100%; 
+   height: 120px;
+   display: block;
+}
+#reset{
+    width: 150px;
+    height: 70px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    position: relative;
+    left: 25px;
+    font-size: 20px;
+}
+#reset:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+#change{
+    width: 150px;
+    height: 70px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    position: relative;
+    right: -75px;
+    font-size: 20px;
+}
+#change:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;}
+
+#x-win{
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 3px solid red;
+    text-align: center;
+    line-height: 250px;
+    font-size: 70px;
+    color: white;
+    display: none;
+    box-shadow: rgba(255,0,0,0.5) 0px 10px 36px 0px, rgba(255,0,0,0.5) 0px 0px 0px 1px;
+}
+#oke-x{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid red;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#oke-x:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+#o-win{
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 3px solid blue;
+    text-align: center;
+    line-height: 250px;
+    font-size: 70px;
+    color: white;
+    display: none;
+    box-shadow: rgba(0,0,255,0.5) 0px 10px 36px 0px, rgba(0,0,255,0.5) 0px 0px 0px 1px;
+}
+#oke-o{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#oke-o:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+#twoChicken{
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 3px solid blue;
+    text-align: center;
+    line-height: 250px;
+    font-size: 70px;
+    color: white;
+    display: none;
+    box-shadow: rgba(0,0,255,0.5) 0px 10px 36px 0px, rgba(0,0,255,0.5) 0px 0px 0px 1px;
+}
+#oke-2chicken{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#oke-2chicken:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}

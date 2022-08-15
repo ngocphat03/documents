@@ -1,0 +1,121 @@
+*{
+    /* font-family: 'Poppins', sans-serif; */
+}
+.body{
+    font-size: 48px;
+}
+.background{
+    background-color: rgb(190, 195, 212);
+    width: 1600px;
+    height: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+#box1{
+    background-color: white;
+    width: 560px;
+    height: 900px;
+    box-sizing: border-box;
+    margin-left: 95px;
+    position:relative;
+    top: 85px;
+    float: left;
+    border-radius: 50px;
+}
+#box2{
+    background-color: white;
+    width: 600px;
+    height: 660px;
+    position: relative;
+    box-sizing: border-box;
+    top: 85px;
+    float: left;
+    margin-left: 80px;
+    border-radius: 50px;
+}
+
+#box3{
+    background-color: #141926;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    top: 85px;
+    margin-top: 65px;
+    border-radius: 50px;
+}
+#box4{
+    background-color: white;
+    width: 370px;
+    height: 300px;
+    box-sizing: border-box;
+    margin-right: 95px;
+    margin-left: 400px;
+    margin-bottom: 85px;
+    margin-top: 150px;
+    border-radius: 50px;
+}
+.introduce{
+    width: 450px;
+    height: 780px;
+    margin: auto;
+}
+.navbar{
+    width: 450px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.navbar-list{
+    list-style: none;
+    padding-left: 0px;
+}
+.navbar-list_item{
+    display: inline-block;
+}
+.box1_information{
+    width: 450px;
+    height: 675px;
+    box-sizing: border-box;
+}
+.box2_information{
+    width: 485px;
+    height: 550px;
+    margin: auto;
+    margin-top: 60px;
+    box-sizing: border-box;
+
+}
+#box2_information-BillingAddress{
+    width: 485px;
+    height: 410px;
+    box-sizing: border-box;
+}
+.navpay{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+.box3_inside{
+    width: 290px;
+    height: 230px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+#box3_money{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+.box4_inside{
+    width: 300px;
+    height: 230px;
+    margin: auto;
+}
+button:hover{
+    background-color: rgb(4, 4, 184);
+}

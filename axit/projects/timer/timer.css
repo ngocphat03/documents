@@ -1,0 +1,58 @@
+body{
+    /* background-image:url(./img/bgr.png); */
+    background-image: url(./img/bgr4.jpg);
+    background-position-x: center;
+    background-position-y: -400px;
+}
+.container{
+    width: 250px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.main{
+    width: 250px;
+    height: 400px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 45px;
+    border-radius: 10px;
+}
+#inputHours, #inputMinute, #inputSecond{
+    margin: 60px 5px 30px 9px;
+    width: 58px;    
+    height: 80px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-color: white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.inputTimerDisplay::placeholder{
+    color: white;
+}
+#batDau, #ketThuc{
+    width: 80px;
+    height: 50px;
+    margin: 20px 0px 0px 25px; 
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.outputTimer{
+    margin: 20px 0px 0px 0px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    color: white;
+}

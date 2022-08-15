@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/205daebc46.js" crossorigin="anonymous"></script>
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <div id="header">
+        <div id="navbar-desktop">
+            <div class="header__navbar">
+                <div class="header__navbar--logo">
+                    <img width="50px" height="50px"  src="../img/logo--axit--white-red.png" alt="logo">
+                </div>
+                <nav class="header__navbar__menu danh-sach">
+                    <ul class="header__navbar__menu--list">
+                        <li><a class="home" href="/index.html">Trang chủ</a></li>
+                        <li><a href="">Diễn đàn</a>
+                            <ul>
+                                <li><a href="https://daynhauhoc.com/">Daynhauhoc</a></li>
+                                <li><a href="https://toidicodedao.com/">Toidicodedao</a></li>
+                                <li><a href="http://congdongcviet.com/">Cộng đồng C Việt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Các khóa học</a>
+                            <ul>
+                                <li><a href="https://vietjack.com/">Vietjack</a></li>
+                                <li><a href="https://fullstack.edu.vn/">F8</a></li>
+                                <li><a href="https://www.w3schools.com/">w3schools</a></li>
+                                <li><a href="https://stackoverflow.com/">stackoverflow</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__navbar__menu nguoi-dung">
+                    <ul class="header__navbar__menu--list">
+                        <li><a href="../register/register.html">Đăng ký</a></li>
+                        <li><a href="../login/login.html">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="navbar-mobile">
+            <section class="top-nav">
+                <div>
+                    <img width="50px" height="50px"  src="../img/logo--axit--white-red.png" alt="logo">
+                </div>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+                </label>
+                <ul class="menu">
+                    <li><a href="../register/register.html">Đăng ký</a></li>
+                    <li><a href="../login/login.html">Đăng nhập</a></li>
+                    <li><a class="home" href="../home/home.html">Trang chủ</a></li>
+                        <li><a href="">Diễn đàn</a></li>
+                        <li><a href="">Các khóa học</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div id="fixed-header" style="width: 100%; height: 50px;"></div>
+    <div class="contener">
+        <div class="contener__login-box">
+            <div class="contener__login-box__conten">
+                <h1>Đăng nhập</h1>
+                <label class="input-introduce" for="username"><b>Tên đăng nhập</label>
+                <input class="input-introduce" type="text" placeholder="Tên đăng nhập"
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input class="input-introduce" type="password" placeholder="Mật khẩu" name="psw" required>            
+                <button class="input-introduce" type="submit">Đăng nhập</button>
+                <div class="password">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Lưu đăng nhập
+                    </label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

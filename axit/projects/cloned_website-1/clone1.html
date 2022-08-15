@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./clone1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/205daebc46.js" crossorigin="anonymous"></script>  
+    <script src="./clone1.js"></script> 
+    <title>CLone1</title>
+</head>
+<body>
+    <div class="screen">
+    <div class="contaner1">
+        <div class="navbar">
+            <div class="navbar__menu">
+                <ul class="navbar__menu--list">
+                    <li>Clients</li>
+                    <li onclick="order()" id="orders">Orders</li>
+                    <li>Messages</li>
+                    <li onclick="user()" id="user" class="main-page" style=" color: #103c82; background-color: #f5f8ff; border: 2px solid #c7d2e6;">Users</li>
+                    <li>Settings</li>
+                </ul>
+            </div>
+            <div class="navbar__user">
+                <ul class="navbar__user--list">
+                    <li class="fa-solid fa-angle-down"></li>
+                    <li class="navbar__user--name">Ngoc Phat</li>
+                    <li><img src="/img/avatar.jpg" alt="avata" class="navbar__user--avata"></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        
+        <div id="page-user" class="page">
+            <div class="main">
+                <div class="main__user">
+                    <div class="main__user--amount">
+                        <h1>Users</h1>
+                        <p>38 users</p>
+                    </div>
+                </div>
+                <div class="main__button">
+                    <button class="main__button--btn">
+                        <i class="fa-solid fa-plus"></i>
+                        <span> Invite user</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass search--glass"></i>
+                <input class="search--nav" type="text" placeholder="Search for user, email address..." value="">
+                <i class="fa-solid fa-sliders search--setting"></i>
+            </div>
+            <div class="users--selected">
+                <i id="reset" onclick="reset()" class="fa-solid fa-minus button-minus" style="line-height: 35px;"></i>
+                <p id="allUser">0 users selected</p>
+            </div>
+            <div class="people">
+                <div onclick="people1()" id="people1" class=" people__list">
+                    <div id="PP1Btn" class="people__list--button"><i class="fa-solid fa-check"></i></div>
+                    <div class="people__list--avata"><img src="/img/avatar.jpg" alt="avt" class="people__list--img"></div>
+                    <div class="people__list--name">Jane Cooper</div>
+                    <div class="people__list--mail"><small>janecooper@mail.com</small></div>
+                    <div class="people__list--office">Admin</div>
+                    <div class="people__list--active">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Active</p>
+                    </div>
+                    <div class="people__list--time">13 minutes ago</div>
+                </div>
+                <hr id="peopleHr1">
+                <div onclick="people2()" id="people2" class=" people__list">
+                    <div id="PP2Btn" class="people__list--button"><i class="fa-solid fa-check"></i></div>
+                    <div class="people__list--avata"><img src="/img/avatar.jpg" alt="avt" class="people__list--img"></div>
+                    <div class="people__list--name">Wade Warren</div>
+                    <div class="people__list--mail">wadewarrenr@mail.com</div>
+                    <div class="people__list--office">Editor</div>
+                    <div class="people__list--active">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Active</p>
+                    </div>
+                    <div class="people__list--time">47 minutes ago</div>
+                </div>
+                <hr id="peopleHr2">
+                <div onclick="people3()" id="people3" class=" people__list">
+                    <div id="PP3Btn" class="people__list--button"><i class="fa-solid fa-check"></i></div>
+                    <div class="people__list--avata"><img src="/img/avatar.jpg" alt="avt" class="people__list--img"></div>
+                    <div class="people__list--name">Esther Howard</div>
+                    <div class="people__list--mail">estherhoward@mail.com</div>
+                    <div class="people__list--office">Editor</div>
+                    <div class="people__list--active">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Active</p>
+                    </div>
+                    <div class="people__list--time">24 minutes ago</div>
+                </div>
+                <hr id="peopleHr3">
+                <div onclick="people4()" id="people4" class=" people__list">
+                    <div id="PP4Btn" class="people__list--button"><i class="fa-solid fa-check"></i></div>
+                    <div class="people__list--avata"><img src="/img/avatar.jpg" alt="avt" class="people__list--img"></div>
+                    <div class="people__list--name">Brooklyn Simmons</div>
+                    <div class="people__list--mail">brooklynsimmons@mail.com</div>
+                    <div class="people__list--office">Editor</div>
+                    <div class="people__list--inactive">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Inactive</p>
+                    </div>
+                    <div style="position: relative; left: -25px;" class="people__list--time">1 month ago</div>
+                </div>
+                <hr id="peopleHr4">
+                <div onclick="people5()" id="people5" class=" people__list">
+                    <div id="PP5Btn" class="people__list--button"><i class="fa-solid fa-check"></i></div>
+                    <div class="people__list--avata"><img src="/img/avatar.jpg" alt="avt" class="people__list--img"></div>
+                    <div class="people__list--name">Robert Fox</div>
+                    <div class="people__list--mail">robertfox@mail.com</div>
+                    <div class="people__list--office">Editor</div>
+                    <div class="people__list--active">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Active</p>
+                    </div>
+                    <div class="people__list--time">5 minutes ago</div>
+                </div>
+            </div>
+            <div class="page__number">
+                <div class="page__number--total-pages">1-5 of 23</div>
+                <div class="page__number--control">
+                    <span class="page__number--control--text">Rows per page:</span>
+                    <div class="total-page">
+                        <span>5</span>
+                        <span class="fa-solid fa-angle-down"></span>
+                    </div>
+                    <span class="page-control">
+                        <i class="fa-solid fa-arrow-left page-control-left"></i>
+                        <i class="fa-solid fa-arrow-right page-control-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="page-oder" class="page02">
+            <div class="main">
+                <div class="main__user">
+                    <div class="main__user--amount">
+                        <h1>Orders</h1>
+                        <p>56 orders</p>
+                    </div>
+                </div>
+                <div class="main__button">
+                    <button class="main__button--btn">
+                        <i class="fa-solid fa-plus"></i>
+                        <span> New order</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass search--glass"></i>
+                <input class="search--nav" type="text" placeholder="Search for ID code, name, package ID email address.." value="">
+                <i class="fa-solid fa-sliders search--setting"></i>
+            </div>
+            <div class="order__title">
+                <div class="order__title--id">
+                    <div id="odAll" onclick="odAllClick()" class="order__title--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__title--id--name">
+                        <span>Order ID</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="order__title--number"></div>
+                <div class="order__title--name">
+                    <span>Name</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="order__title--email">
+                    <span>Email Address</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="order__title--package-id">
+                    <span>Package ID</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                 <div class="order__title--status">
+                    <span>Status</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="order__title--date">
+                    <span>Date</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </div>
+            <hr>
+            <div id="order01" class="order__user" style="height: 150px;" onclick="order01Hover()">
+                <div class="order__user--id">
+                    <div id="odCheckBtn1" class="order__user--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__user--id--name">
+                        <span>29P1PFZ75690DFG</span>
+                    </div>
+                </div>
+                <div class="order__user--number">
+                    <span>3587230957</span>
+                </div>
+                <div class="order__user--name">
+                    <span>Earl Owen</span>
+                </div>
+                <div class="order__user--email">
+                    <span>earlowen@mail.com</span>
+                </div>
+                <div class="order__user--package-id">
+                    <span>vmta-cp4pm</span>
+                </div>
+                 <div class="order__user--status">
+                    <div class="order__user--status--btn"><span><i class="fa-solid fa-cube cube"></i><p>Sent</p></span></div>
+                </div>
+                <div class="order__user--date">
+                    <span>22 Oct, 2021</span>
+                </div>
+                <div id="orderButton01" class="order__user--button">
+                    <span class="order__user--a"><i class="fa-solid fa-ellipsis doc"></i></span>
+                </div>
+            </div>
+            <hr>
+            <div id="order02" class="order__user" style="height: 150px;" onclick="order02Hover()">
+                <div class="order__user--id">
+                    <div id="odCheckBtn2" class="order__user--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__user--id--name">
+                        <span>EF8HLA1234DFG00</span>
+                    </div>
+                </div>
+                <div class="order__user--number">
+                    <span>15632585</span>
+                </div>
+                <div class="order__user--name">
+                    <span>Marilyn Morales</span>
+                </div>
+                <div class="order__user--email">
+                    <span>marilynmorales@mail.com</span>
+                </div>
+                <div class="order__user--package-id">
+                    <span>kndt-n3md</span>
+                </div>
+                <div class="order__user--status">
+                   <div class="order__user--status--btn"><span><i class="fa-solid fa-cube cube"></i><p>Sent</p></span></div>
+               </div>
+                <div class="order__user--date">
+                    <span>8 Sep, 2021</span>
+                </div>
+                <div id="orderButton02" class="order__user--button">
+                    <span class="order__user--a"><i class="fa-solid fa-ellipsis doc"></i></span>
+                </div>
+            </div>
+            <hr>
+            <div id="order03" class="order__user" style="height: 150px;" onclick="order03Hover()">
+                <div class="order__user--id">
+                    <div id="odCheckBtn3" class="order__user--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__user--id--name">
+                        <span>0QR29XA83NFJGHJ</span>
+                    </div>
+                </div>
+                <div class="order__user--number">
+                    <span>3598109483</span>
+                </div>
+                <div class="order__user--name">
+                    <span>Ashley Schneider</span>
+                </div>
+                <div class="order__user--email">
+                    <span>ashleyschneider@gmail.com</span>
+                </div>
+                <div class="order__user--package-id">
+                    <span>epu7-qhga</span>
+                </div>
+                <div class="order__user--status">
+                   <div class="order__user--status--btn"><span><i class="fa-solid fa-cube cube"></i><p>Sent</p></span></div>
+               </div>
+                <div class="order__user--date">
+                    <span>17 Oct, 2021</span>
+                </div>
+                <div id="orderButton03" class="order__user--button">
+                    <span class="order__user--a"><i class="fa-solid fa-ellipsis doc"></i></span>
+                </div>
+            </div>
+            <hr>
+            <div id="order04" class="order__user" style="height: 150px;"  onclick="order04Hover()">
+                <div class="order__user--id">
+                    <div id="odCheckBtn4" class="order__user--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__user--id--name">
+                        <span>6YT65EN123435BC</span>
+                    </div>
+                </div>
+                <div class="order__user--number">
+                    <span>5231900350</span>
+                </div>
+                <div class="order__user--name">
+                    <span>Sandra Ingram</span>
+                </div>
+                <div class="order__user--email">
+                    <span>sandraingram@mail.com</span>
+                </div>
+                <div class="order__user--package-id">
+                    <span>--</span>
+                </div>
+                <div class="order__user--status">
+                   <div class="order__user--status--btn--off"><span><i class="fa-regular fa-clock cube1"></i><p>Pending</p></span></div>
+               </div>
+                <div class="order__user--date">
+                    <span>1 Feb, 2021</span>
+                </div>
+                <div id="orderButton04" class="order__user--button">
+                    <span class="order__user--a"><i class="fa-solid fa-ellipsis doc"></i></span>
+                </div>
+            </div>
+            <hr>
+            <div id="order05" class="order__user" style="height: 150px;" onclick="order05Hover()">
+                <div class="order__user--id">
+                    <div id="odCheckBtn5" class="order__user--id--btn"><i class="fa-solid fa-check checkAll"></i></div>
+                    <div class="order__user--id--name">
+                        <span>8U3IJPZRRTOMAS2</span>
+                    </div>
+                </div>
+                <div class="order__user--number">
+                    <span>3402350234</span>
+                </div>
+                <div class="order__user--name">
+                    <span>Krista Hanson</span>
+                </div>
+                <div class="order__user--email">
+                    <span>khisrahanson@mail.com</span>
+                </div>
+                <div class="order__user--package-id">
+                    <span>wpt9-jh2v</span>
+                </div>
+                <div class="order__user--status">
+                   <div class="order__user--status--btn"><span><i class="fa-solid fa-cube cube"></i><p>Sent</p></span></div>
+               </div>
+                <div class="order__user--date">
+                    <span>24 May, 2021</span>
+                </div>
+                <div id="orderButton05" class="order__user--button">
+                    <span class="order__user--a"><i class="fa-solid fa-ellipsis doc"></i></span>
+                </div>
+            </div>
+            <div class="page__number">
+                <div class="page__number--total-pages">1-5 of 47</div>
+                <div class="page__number--control">
+                    <span class="page__number--control--text">Rows per page:</span>
+                    <div class="total-page">
+                        <span>5</span>
+                        <span class="fa-solid fa-angle-down"></span>
+                    </div>
+                    <span class="page-control">
+                        <i class="fa-solid fa-arrow-left page-control-left"></i>
+                        <i class="fa-solid fa-arrow-right page-control-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tictactoc.css">
+    <script src="titactoc.js"></script>
+    <title>Caro 3x3</title>
+</head>
+<body>
+    <div class="contaner">
+        <div class="contaner__main">
+            <button onclick="box1()" id="box1" class="box">
+                <p id="box1XO"></p>
+            </button>
+            <button onclick="box2()" id="box2" class="box">
+                <p id="box2XO"></p>
+            </button>
+            <button onclick="box3()" id="box3" class="box">
+                <p id="box3XO"></p>
+            </button>
+            <button onclick="box4()" id="box4" class="box">
+                <p id="box4XO"></p>
+            </button>
+            <button onclick="box5()" id="box5" class="box">
+                <p id="box5XO"></p>
+            </button>
+            <button onclick="box6()" id="box6" class="box">
+                <p id="box6XO"></p>
+            </button>
+            <button onclick="box7()" id="box7" class="box">
+                <p id="box7XO"></p>
+            </button>
+            <button onclick="box8()" id="box8" class="box">
+                <p id="box8XO"></p>
+            </button>
+            <button onclick="box9()" id="box9" class="box">
+                <p id="box9XO"></p>
+            </button>
+        </div>
+        <div class="contaner__point">
+            <div class="title">
+                <h1>Tic Tac Toc</h1>
+                <h3>By AXit</h3>
+            </div>
+            <div class="score">
+                <h1>Score</h1>
+                <div class="score__xo">
+                    <div class="score__xo--x">
+                        <span class="box-x">X</span>
+                        <span id="point-x">0</span>
+                    </div>
+                    <div class="fixed"><br>:</div>
+                    <div class="score__xo--o">
+                        <span class="box-o">O</span>
+                        <span id="point-o">0</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="reset()" id="reset">Reset</button>
+            <button onclick="change()" id="change">First: X</button>
+        </div>
+    </div>
+    <div id="x-win">Player X win
+        <button onclick="okeXBtn()" id="oke-x">OK</button>
+    </div>
+    <div id="o-win">Player O win
+        <button onclick="okeOBtn()" id="oke-o">OK</button>
+    </div>
+    <div id="twoChicken">TWO CHICKEN :v
+        <button onclick="oke2chickenBtn()" id="oke-2chicken">OK</button>
+    </div>
+</body>
+</html>
