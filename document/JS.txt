@@ -487,3 +487,76 @@ Let, var, const:
 	var 100%
 	let, const 0%
 	
+
+<==========>
+JSON là gì
+	JSON là viết tắt của JavaScript Object Notation, là một kiểu định dạng dữ liệu tuân theo một quy luật nhất định
+	 mà hầu hết các ngôn ngữ lập trình hiện nay đều có thể đọc được. JSON là một tiêu chuẩn mở để trao đổi dữ liệu 
+	 trên web.
+	 VD: 
+	 {
+		"name" : "NgocPhat",
+		"title" : "JSON là gì",
+		"description" : "là một tiêu chuẩn để trao đổi dữ liệu trên web."
+	}
+
+
+<==========>
+JSON: parse và stringify là gì?
+	parse là nhận vào một chuỗi JSON và chuyển đổi thành một đối tượng JavaScript ngược lại stringify là lấy một đối 
+	tượng JavaScript chuyển về thành một chuỗi JSON
+	VD:
+	const myObj = {
+	  	name: 'Ngoc Phat',
+		age: 19,
+	 	social: 'https://axit.edu.vn/',
+	};
+
+	const myObjStr = JSON.stringify(myObj);
+
+	console.log(myObjStr);
+	// JSON "{"name":"Ngoc Phát","age":19,"social":"https://axit.edu.vn/"}"
+
+	console.log(JSON.parse(myObjStr));
+	// Object {name: "Ngoc Phat", age: 19, social: "https://axit.edu.vn/"}
+
+
+<==========>
+
+LocalStrorage là gì
+	LocalStrorage là một phần mềm được tích hợp sẵn vào trình duyệt để có 
+	1. Thêm dữ liệu vào LocalStrorage 
+		LocalStorage.setItem(tên dữ liệu cần thêm vào, giá trị của dữ liệu)
+	2. Lấy một dữ liệu trong LocalStorage
+		LocalStorage.getItem(tên dữ liệu muốn lấy);
+	3. Kiểm tra số lượng LocalStorage đã lưu trên trình duyệt (length)
+		LocalStorage.length;
+	4. Xóa dữ liệu trong LocalStorage - removeItem()
+		LocalStorage.removeItem(giá trị muốn xóa);
+	5. Xóa toàn bộ dữ liệu trong LocalStorage - clear()
+		LocalStorage.clear()
+
+<==========>
+
+SPA (Single Page Application)
+	Là một cách triển khai web theo kiểu dạng đơn. Người dùng truy cập trang con
+	sẽ không ảnh hưởng đến trang gốc
+MPA (Multi Page Application)
+	Là một cách triển khai web theo dạng nhiều trang. Khi chuyển đổi giữa các giao diện, người dùng phải chờ trình duyệt tải web page mới
+
+
+<==========>
+
+Fetch API
+
+Fetch API là một API đơn giản cho việc gừi và nhận requesst bằng js.
+VD:
+if (!('fetch' in window)) {
+  console.log('Fetch API not found, try including the polyfill');
+  return;
+}
+// We can safely use fetch from now on
+
+<==========>
+AXIOS là gì?
+	Axios là một thư viện HTTP Client dựa trên Promise dành cho node.js và trình duyệt. Nó có tính đẳng hình (tức là cùng codebase có thể chạy trong cả trình duyệt và node.js). Ở phía server thì nó sử dụng native module http trong node.js, còn ở phía client (trình duyệt) thì nó sử dụng XMLHttpRequest.
