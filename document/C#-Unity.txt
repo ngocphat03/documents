@@ -1,0 +1,163 @@
+1 là biến và hàm:
+2 là tạo đối tượng và gọi phương thức và thuộc tính của đối tượng.
+3 là từ khóa private và public(Mấy cái phạm vi truy cập khác có thấy sài bao giờ đâu)
+4 là từ khóa static, hay sài vì nhiều lớp trong unity engine viết nhieuf hàm static hỗ trợ.
+5 là tư duy logic lập trình
+
+Hàm:
+	
+class: là một kiểu dữ liệu mới do người dùng tự thực hiện
+	class<tên lớp>
+	{
+		<Phạm vi truy cập> <Các thành phần của lớp>;
+	}
+ trong đó:
+	- Tên lớp là tên do người dùng đặt
+	- Phạm vi truy cập: bao gồm các từ khóa như public, protected, private, static,...
+	- Các thành phần của lớp: bao gồm các biến. phương thức của lớp
+
+
+Destroy: Phá hủy
+	Câu lệnh:
+		Destroy(Object);
+		Destroy(Object, t); [Phá hủy với thời gian t]
+DestroyImmediate: phá hủy ngay lập tức
+	public static void DestroyImmediate(Object obj, bool allowDestroyingAssets = false);
+	-Trong đó:
+		obj: đối tượng bị phá hủy
+		allowDestroyingAssets: đặt thành true để phá hủy
+DontDestroyOnLoad: không phá hủy đối tượng mục tiêu khi tải cảnh mới
+	public static void DontDestroyOnLoad(Object target);
+	-Trong đó:
+		target: đối tượng không bị phá hủy khi tải lại cảnh
+
+Instantiate: Sao chép đối tượng nào đó và trả về đối tượng được sao chép
+	Câu lệnh:
+		public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
+		- Trong đó:
+			origin là một đối tượng mà bạn muốn tạo bản sao
+			position là vị trí cho đối tượng mới
+			rotation là định hướng cho đối tượng mới
+			parent là bản gốc được gán cho đối tượng mới
+	VD:
+		Instantiate(prefab, new Vector3(i * 2.0f, 0, 0), Quaternion.identity);
+Input.GetAxis: trả về giá trị trục ảo (của chuột)
+	Câu lệnh
+		<kiểu> <tên biến> = Input.GetAxis("Vertical/Horizontal [tên???]");
+	VD: 
+
+        float translation = Input.GetAxis("Vertical");
+        float rotation = Input.GetAxis("Horizontal");
+Enabled: ???
+	VD:
+	public void Start()
+    {
+        //Enables the pause menu UI.
+        pauseMenu.enabled = true;
+    }
+
+isActiveAndEnabled: kiểm tra xem GameObject có hoạt động không, nếu hoạt động sẽ trả về giá trị True ngược lại sẽ trả về False
+	VD: 
+	//Checks if the GameObject and Image are active and enabled.
+    if (pauseMenu.isActiveAndEnabled)
+    {
+        //If the Image is enabled, print "Enabled" in the console. Stops when the image or GameObject is disabled.
+        Debug.Log("Enabled");
+    }
+gameObject: đối tượng trò chơi mà thành phần này được gắn vào với một đối tượng trò chơi
+tag: thẻ là đối tượng của gameObject. Một thẻ có thể được sử dụng để xác định một đối tượng trò chơi. Thẻ phải được khai báo trong trình quản lý thẻ và lớp trước khi sử dụng chúng.
+	VD: Debug.Log("Transform Tag is: " + gameObject.tag);
+transform: là thứ gắn liền với gameObject. Nó được sử dụng để lưu trưc và thao tác vị trí, xoay và tỉ lệ của đối tượng.
+attachedRigidbody:?????
+	VD:  GetComponent<Joint2D>().attachedRigidbody.AddForce(force);
+breakForce: lực cần tác dụng để khớp bị gãy???
+reactionForce: nhận phản lực khớp?????
+reactionTorque: nhận mô-men xoắn của khớp???
+breakTorque: mô-men xoắn cần tác dụng để khớp này bị gãy?????
+connectedBody: đối tượng Rigidbody2D mà đầu kia được gắn vào????
+enableCollision: ??????
+hideFlags: đối tượng có thể ẩn, có thể lưu bởi người dùng
+name: nếu class này cũng được đính kèm với GameObject, thì trường "name" được đặt thành tên của GameObject đó
+BroadcastMessage ????
+	methodName: tên của phương thức được gọi
+	parameter: tham số tùy chọn để truyền cho phương thức
+	options: Có nên phát sinh lỗi nếu phương thức không tồn tại cho một đối tượng đích nhất định không?
+CompareTag: kiểm tra thẻ của game object so với thẻ xác định
+GetComponent: trả về loại thành phần nếu gameObject có một thành phần được đính kèm
+	VD: 
+		 HingeJoint hinge = gameObject.GetComponent(typeof(HingeJoint)) as HingeJoint;
+GetComponentInChildren: trả về loại thành phần trong gameObject hoặc bất kỳ thành phần con nào của nó bằng cách sử dụng tìm kiếm theo độ sâu trước tiên
+	VD:
+		HingeJoint hinge = GetComponentInChildren(typeof(HingeJoint)) as HingeJoint;
+GetComponentInParent: trả về loại thành phần trong gameObject hoặc bất kì cái gì trong thành phần cha mẹ của nó
+	VD:
+		HingeJoint hinge = GetComponentInParent(typeof(HingeJoint)) as HingeJoint;
+GetComponents: trả về tất cả thành phần của loại Type ở trong gameObject
+	VD:
+		HingeJoint[] hinges = GetComponents<HingeJoint>();
+        for (int i = 0; i < hinges.Length; i++)
+        {
+            hinges[i].useSpring = false;
+        }
+GetComponentsInChildren: trả về tất cả các thành phần của loại Type của gameObject hoặc bất kì thành phần con nào của nó sử dụng tìm kiếm độ sâu
+	VD:
+		hingeJoints = GetComponentsInChildren<HingeJoint>();
+
+        foreach (HingeJoint joint in hingeJoints)
+            joint.useSpring = false;
+GetComponentsInParent: trả về tất cả các thành phần của loại Type của gameObject hoặc bất kì thành phần cha nào của nó
+	VD:
+		hingeJoints = (HingeJoint[])gameObject.GetComponentsInParent(typeof(HingeJoint));
+SendMessage: gọi phương thức có tên methodName trên mọi MonoBehaviour trong đối tượng trò chơi này
+	public void SendMessage(string methodName, object value, SendMessageOptions options);
+	-Trong đó: 
+		methodName: tên của phương thức được gọi
+		value: tham số tùy chọn cho phương pháp
+		options: có nên xảy ra lỗi nếu đối tượng đích không triển khai phương thức cho thông báo
+	VD:
+		SendMessage("ApplyDamage", 5.0);
+SendMessageUpwards: gọi phương thức có tên methodName trên mọi MonoBehavior trong đối tượng trò chơi này và trên mọi tổ tiên của hành vi
+	public void SendMessageUpwards(string methodName, SendMessageOptions options);
+	-trong đó:
+		methodName: tên của phương thức được gọi
+		value: tham số tùy chọn cho phương pháp
+		options: Có nên phát sinh lỗi nếu phương thức không tồn tại trên đối tượng đích không?
+	VD:
+		SendMessageUpwards("ApplyDamage", 5.0);
+TryGetComponent: nhận thành phần của kiểu được chỉ định nếu nó tồn tại (trả về true nếu thành phần được tìm thấy, ngược lại là false)
+	public bool TryGetComponent(Type type, out Component component);
+	-trong đó: 
+		type: loại thành phần cần truy xuất
+		component: đổi số đầu ra sẽ chứa thành phần hoặc null
+	VD:
+		if (TryGetComponent(out HingeJoint hinge))
+        {
+            hinge.useSpring = false;
+        }
+GetReactionForce: nhận phản lực của khớp cho trước timeStep
+	public Vector2 GetReactionForce(float timeStep);
+	-Trong đó:
+		timeSleep là thời điểm tính phản lực cho 
+GetReactionTorque: nhận mô-men phản ứng của khớp cho trước timeStep
+	public float GetReactionTorque(float timeStep);
+	-trong đó:
+		timeStep: thời gian để tính mô-men phản lực cho
+GetInstancelID: nhận ID phiên bản của đối tượng
+	public int GetInstanceID();
+	VD:
+		Debug.Log(go + " is an active object " + go.GetInstanceID());
+ToString: ép kiểu sang string
+	public string ToString();
+	VD:
+		m_Text.text = "GameObject Name : " + gameObject.ToString();
+FindObjectOfType: trả về đối tượng được tải hoạt động đầu tiên của loại Type
+	public static Object FindObjectOfType(Type type, bool includeInactive);
+	-Trong đó: 
+		type: loại đối tượng cần tìm
+FindObjectsOfType: nhận danh sách tất cả các đối tượng được tải thuộc loại Type
+	public static Object[] FindObjectsOfType(Type type, bool includeInactive);
+	-trong đó: 
+		type: loại đối tượng cần tìm
+		includeInactive: nếu đúng các thành phần được đính kèm với gameObject không hoạt động cũng được bao gồm
+	VD:
+		var foundCanvasObjects = FindObjectsOfType<CanvasRenderer>();
