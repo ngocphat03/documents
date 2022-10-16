@@ -48,7 +48,7 @@ Input.GetAxis: trả về giá trị trục ảo (của chuột)
 
         float translation = Input.GetAxis("Vertical");
         float rotation = Input.GetAxis("Horizontal");
-Enabled: ???
+Enabled: Kích hoạt (Thường được dùng với button)
 	VD:
 	public void Start()
     {
@@ -150,14 +150,8 @@ ToString: ép kiểu sang string
 	public string ToString();
 	VD:
 		m_Text.text = "GameObject Name : " + gameObject.ToString();
-FindObjectOfType: trả về đối tượng được tải hoạt động đầu tiên của loại Type
+FindObjectOfType: Sử dụng function ở file script khác
 	public static Object FindObjectOfType(Type type, bool includeInactive);
 	-Trong đó: 
 		type: loại đối tượng cần tìm
-FindObjectsOfType: nhận danh sách tất cả các đối tượng được tải thuộc loại Type
-	public static Object[] FindObjectsOfType(Type type, bool includeInactive);
-	-trong đó: 
-		type: loại đối tượng cần tìm
-		includeInactive: nếu đúng các thành phần được đính kèm với gameObject không hoạt động cũng được bao gồm
-	VD:
-		var foundCanvasObjects = FindObjectsOfType<CanvasRenderer>();
+	

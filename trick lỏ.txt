@@ -6,4 +6,6 @@ Các website hỗ trợ:
 	https://webcoban.vn/
 	https://fullstack.edu.vn/
 Mẹo code:
-	
+	Tạo dựng một tính năng mới --> tạo nhánh trên Git
+	Sửa tính năng đó --> chuyển nhánh trước khi làm
+	Cố gắng clean code
