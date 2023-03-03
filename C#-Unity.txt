@@ -1,7 +1,7 @@
 1 là biến và hàm:
 2 là tạo đối tượng và gọi phương thức và thuộc tính của đối tượng.
 3 là từ khóa private và public(Mấy cái phạm vi truy cập khác có thấy sài bao giờ đâu)
-4 là từ khóa static, hay sài vì nhiều lớp trong unity engine viết nhieuf hàm static hỗ trợ.
+4 là từ khóa static, hay sài vì nhiều lớp trong unity engine viết nhiều hàm static hỗ trợ.
 5 là tư duy logic lập trình
 
 Hàm:
@@ -41,14 +41,20 @@ Instantiate: Sao chép đối tượng nào đó và trả về đối tượng 
 			parent là bản gốc được gán cho đối tượng mới
 	VD:
 		Instantiate(prefab, new Vector3(i * 2.0f, 0, 0), Quaternion.identity);
-Input.GetAxis: trả về giá trị trục ảo (của chuột)
+
+Input.GetAxis: trả về giá trị trục ảo 
 	Câu lệnh
-		<kiểu> <tên biến> = Input.GetAxis("Vertical/Horizontal [tên???]");
+		<kiểu> <tên biến> = Input.GetAxis("Vertical/Horizontal");
+		- Trong đó: 
+			Vertical là trục đứng
+			Horizontal là trục ngang
+			
 	VD: 
 
         float translation = Input.GetAxis("Vertical");
         float rotation = Input.GetAxis("Horizontal");
-Enabled: Kích hoạt (Thường được dùng với button)
+
+Enabled: Kích hoạt (được sử dụng với các đối tượng là GameObject)
 	VD:
 	public void Start()
     {
@@ -64,12 +70,17 @@ isActiveAndEnabled: kiểm tra xem GameObject có hoạt động không, nếu h
         //If the Image is enabled, print "Enabled" in the console. Stops when the image or GameObject is disabled.
         Debug.Log("Enabled");
     }
-gameObject: đối tượng trò chơi mà thành phần này được gắn vào với một đối tượng trò chơi
+
+gameObject: đối tượng mà script được gắn vào GameObject
+
 tag: thẻ là đối tượng của gameObject. Một thẻ có thể được sử dụng để xác định một đối tượng trò chơi. Thẻ phải được khai báo trong trình quản lý thẻ và lớp trước khi sử dụng chúng.
 	VD: Debug.Log("Transform Tag is: " + gameObject.tag);
+
 transform: là thứ gắn liền với gameObject. Nó được sử dụng để lưu trưc và thao tác vị trí, xoay và tỉ lệ của đối tượng.
-attachedRigidbody:?????
+
+attachedRigidbody: được sử dụng để truy cập Rigidbody từ Collider
 	VD:  GetComponent<Joint2D>().attachedRigidbody.AddForce(force);
+
 breakForce: lực cần tác dụng để khớp bị gãy???
 reactionForce: nhận phản lực khớp?????
 reactionTorque: nhận mô-men xoắn của khớp???
@@ -83,10 +94,10 @@ BroadcastMessage ????
 	parameter: tham số tùy chọn để truyền cho phương thức
 	options: Có nên phát sinh lỗi nếu phương thức không tồn tại cho một đối tượng đích nhất định không?
 CompareTag: kiểm tra thẻ của game object so với thẻ xác định
-GetComponent: trả về loại thành phần nếu gameObject có một thành phần được đính kèm
+GetComponent: trả về loại thành phần nếu GameObject có một thành phần được đính kèm
 	VD: 
 		 HingeJoint hinge = gameObject.GetComponent(typeof(HingeJoint)) as HingeJoint;
-GetComponentInChildren: trả về loại thành phần trong gameObject hoặc bất kỳ thành phần con nào của nó bằng cách sử dụng tìm kiếm theo độ sâu trước tiên
+GetComponentInChildren: trả về loại thành phần trong GameObject hoặc bất kỳ thành phần con nào của nó bằng cách sử dụng tìm kiếm theo độ sâu trước tiên
 	VD:
 		HingeJoint hinge = GetComponentInChildren(typeof(HingeJoint)) as HingeJoint;
 GetComponentInParent: trả về loại thành phần trong gameObject hoặc bất kì cái gì trong thành phần cha mẹ của nó
