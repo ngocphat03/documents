@@ -161,7 +161,7 @@ ToString: ép kiểu sang string
 	public string ToString();
 	VD:
 		m_Text.text = "GameObject Name : " + gameObject.ToString();
-FindObjectOfType: Sử dụng function ở file script khác
+FindObjectOfType: Tìm kiếm và trả về đối tượng cần tìm (có thể tìm được script gắn với object) [Hạn chế dùng vì khá nặng]
 	public static Object FindObjectOfType(Type type, bool includeInactive);
 	-Trong đó: 
 		type: loại đối tượng cần tìm
